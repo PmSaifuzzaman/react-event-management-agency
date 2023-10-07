@@ -1,0 +1,56 @@
+[
+    {
+      "id": 1,
+      "service_no": "SVC001",
+      "service_name": "Wedding",
+      "image": "https://i.ibb.co/ckvvtSy/wedding.jpg",
+      "details": "Our wedding planning service offers a comprehensive and stress-free experience for couples. From venue selection to decor, catering, and entertainment, we handle every aspect of your special day. We'll work closely with you to bring your dream wedding to life within your budget. Let us make your wedding day truly unforgettable.Planning a wedding can be a daunting task, but with our expert team, you can relax and enjoy the journey. We have a wide network of trusted vendors, ensuring you get the best deals and top-quality services. Whether you envision a traditional ceremony or a unique, themed wedding, we'll bring your vision to reality.Our dedicated wedding planners will assist you in creating a customized timeline, managing guest lists, and ensuring every detail is perfect. We understand that your wedding day is one of the most important days of your life, and we're committed to making it flawless. From the moment you say 'I do' to the last dance, we'll be there to ensure it's a day to remember.Contact us today to start planning your dream wedding."
+      ,
+      "price": 5000
+    },
+    {
+      "id": 2,
+      "service_no": "SVC002",
+      "service_name": "Birthday Party",
+      "image": "https://i.ibb.co/r2VYzcr/birthday.jpg",
+      "details": "Celebrate your birthday with a personalized party tailored to your interests and age. We organize everything from themed decorations and entertainment to cakes and party favors. Whether it's a child's first birthday or a milestone celebration, our birthday party planning service ensures a memorable experience for everyone.Planning a birthday party can be a lot of work, but our team is here to make it a breeze. We'll sit down with you to understand your preferences, and then we'll take care of all the details. From choosing the perfect venue to coordinating with vendors, we've got it covered.For kids' birthdays, we offer a range of themes and entertainment options, from clowns and magicians to bounce houses and face painting. For adults, we can create sophisticated soirées or fun, themed parties - it's all up to you.No matter the age or size of your guest list, we'll ensure that your birthday celebration is a memorable event. Leave the planning to us so you can focus on enjoying your special day.Contact us today to start planning your next birthday party."
+      ,
+      "price": 1000
+    },
+    {
+      "id": 3,
+      "service_no": "SVC003",
+      "service_name": "Anniversary",
+      "image": "https://i.ibb.co/nkz7ZGn/anniversary.jpg",
+      "details": "Mark your anniversary with elegance and style. Our anniversary event planning includes romantic settings, exquisite dining, and memorable surprises. Whether it's your first or fiftieth anniversary, we create an atmosphere that rekindles love and creates lasting memories.Anniversaries are a time to celebrate the love and commitment you share with your partner. Our team specializes in crafting intimate and meaningful anniversary events. We can arrange a romantic dinner under the stars, a weekend getaway to a cozy cabin, or a grand celebration with family and friends.The key to a successful anniversary event is personalization. We'll work closely with you to understand your unique story and preferences. From there, we'll curate an experience that reflects your love journey.Imagine renewing your vows in a beautiful garden or sharing a private dinner overlooking a breathtaking sunset. Our goal is to create moments that you'll cherish forever. Whether it's a first anniversary or a golden jubilee, we're here to make it special.Contact us today to start planning your anniversary celebration."
+      ,
+      "price": 2500
+    },
+    {
+      "id": 4,
+      "service_no": "SVC004",
+      "service_name": "Engagement Party",
+      "image": "https://i.ibb.co/rx4YNxK/engagement.jpg",
+      "details": "Celebrate your engagement with a beautifully crafted party. Our engagement party planning service focuses on creating a warm and romantic ambiance. From venue selection to decor and entertainment, we ensure your engagement party is a reflection of your love story.Your engagement is a momentous occasion, and it deserves a memorable celebration. Whether you prefer an intimate gathering or a grand soirée, we have the expertise to make it perfect.Our team specializes in designing engagement parties that capture the essence of your relationship. We'll work closely with you to choose a venue that resonates with your story, select decor that reflects your style, and curate a menu that delights your guests.Imagine sharing your engagement story on a beautifully decorated rooftop terrace or dancing the night away in a chic ballroom. We'll handle all the logistics so you can focus on creating memories with your loved ones.Contact us today to start planning your engagement party and let us make this special moment even more magical."
+      ,
+      "price": 1200
+    },
+    {
+      "id": 5,
+      "service_no": "SVC005",
+      "service_name": "Retirement Party",
+      "image": "https://i.ibb.co/HGKcCNW/retirement.jpg",
+      "details": "Bid farewell to a cherished colleague or loved one with a memorable retirement party. Our retirement party planning service includes thoughtful touches and personalized decor. We'll help you honor their achievements and create an enjoyable send-off.Retirement is a significant milestone, and it's a time to celebrate a well-deserved break and the beginning of a new chapter. Our experienced team will work closely with you to plan a retirement party that reflects the retiree's personality and accomplishments.We can organize elegant cocktail parties, casual BBQ gatherings, or themed events that showcase the retiree's hobbies and interests. Whether it's a surprise party or a planned event, we'll handle the logistics with precision.Picture a heartfelt speech followed by laughter and tears of joy as the retiree embarks on their next adventure. We'll ensure every detail is taken care of, from decorations and entertainment to catering and parting gifts.Contact us today to start planning a retirement party that truly honors the retiree's legacy and contributions."
+      ,
+      "price": 800
+    },
+    {
+      "id": 6,
+      "service_no": "SVC006",
+      "service_name": "Baby Shower",
+      "image": "https://i.ibb.co/mTsz1Yg/babyshower.jpg",
+      "details": "Welcome the arrival of your little one with a heartwarming baby shower. Our baby shower planning service takes care of all the details, from adorable themes and games to delightful refreshments. Let us make this special time even more joyous for you and your family.A baby shower is a time of anticipation and celebration. Whether you're a parent-to-be or a friend or family member planning the event, we're here to ensure it's a day filled with love and laughter.Our expert planners will assist you in choosing the perfect theme, decorations, and activities. From whimsical garden parties to gender reveal extravaganzas, we can make your vision a reality.We understand",
+      "price": 600
+    }
+  ]
+  
