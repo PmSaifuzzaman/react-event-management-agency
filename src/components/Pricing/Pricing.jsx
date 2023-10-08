@@ -1,6 +1,17 @@
+
 import { FaCheck } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+
+
 
 const Pricing = () => {
+
+
+        const handlePurchase = () => {
+            console.log('buy button clicked')
+        }
+    
+
     return (
         <div className="max-w-5xl mx-auto">
             <h1 className="text-center text-5xl font-bold mt-6">Plan Pricing</h1>
@@ -20,7 +31,7 @@ const Pricing = () => {
                         <p className='flex items-center justify-center gap-2'><FaCheck />On-site event coordinator</p>
                     </div>
                     <div className='flex items-center justify-center'>
-                        <button className="btn bg-red-400 rounded-r-full rounded-l-full text-white my-6">BUY NOW</button>
+                        <Link to={"/buy"} className="btn bg-red-400 rounded-r-full rounded-l-full text-white my-6">BUY NOW</Link>
                     </div>
                 </div>
                 {/* card 2 */}
@@ -37,7 +48,7 @@ const Pricing = () => {
                         <p className='flex items-center justify-center gap-2'><FaCheck />On-site event coordinator</p>
                     </div>
                     <div className='flex items-center justify-center'>
-                        <button className="btn bg-red-400 rounded-r-full rounded-l-full text-white my-6">BUY NOW</button>
+                        <Link to={"/buy"} className="btn bg-red-400 rounded-r-full rounded-l-full text-white my-6">BUY NOW</Link>
                     </div>
                 </div>
                 {/* card 3 */}
@@ -54,7 +65,7 @@ const Pricing = () => {
                         <p className='flex items-center justify-center gap-2'><FaCheck />On-site event coordinator</p>
                     </div>
                     <div className='flex items-center justify-center'>
-                        <button className="btn bg-red-400 rounded-r-full rounded-l-full text-white my-6">BUY NOW</button>
+                        <Link onClick={handlePurchase} to={"/buy"} className="btn bg-red-400 rounded-r-full rounded-l-full text-white my-6">BUY NOW</Link>
                     </div>
                 </div>
             </div>
