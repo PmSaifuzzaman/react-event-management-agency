@@ -1,6 +1,6 @@
 
 
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { authContext } from "../../providers/AuthProvider";
 import Navbar from "../Navbar/Navbar";
@@ -10,6 +10,10 @@ import Navbar from "../Navbar/Navbar";
 const Register = () => {
     // Destructure from context api
     const {createUser} = useContext(authContext);
+
+    const visitLocation =useLocation();
+    
+    const navigate = useNavigate();
 
     const handleRegister = (e) => {
         e.preventDefault();
@@ -24,6 +28,8 @@ const Register = () => {
         .then((userCredential) => {
             const user = userCredential.user;
             console.log(user)
+            // Navigate user after registration
+            navigate(visitLocation?.state ? visitLocation.state : '/')
           })
           .catch((error) => {
             const errorMessage = error.message;
