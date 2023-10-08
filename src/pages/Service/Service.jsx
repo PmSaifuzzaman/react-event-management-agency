@@ -2,6 +2,7 @@
 import { useLoaderData } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import ServiceCard from "../../components/ServiceCard/ServiceCard";
+import Footer from "../../components/Footer/Footer";
 
 
 const Service = () => {
@@ -17,6 +18,7 @@ const Service = () => {
                     services?.map(service => <ServiceCard key={service.id} service={service}></ServiceCard>)
                 }
             </div>
+            <Footer></Footer>
         </div>
     );
 };

@@ -3,6 +3,8 @@ import Navbar from "../Navbar/Navbar";
 import Banner from "./Banner";
 import ServiceCard from "../../components/ServiceCard/ServiceCard";
 import Footer from "../../components/Footer/Footer";
+import Rating from "../../components/Rating/Rating";
+import Pricing from "../../components/Pricing/Pricing";
 
 
 const Home = () => {
@@ -19,6 +21,8 @@ const Home = () => {
                     services?.map(service => <ServiceCard key={service.id} service={service}></ServiceCard>)
                 }
             </div>
+            <Rating></Rating>
+            <Pricing></Pricing>
             <Footer></Footer>
         </div>
     );

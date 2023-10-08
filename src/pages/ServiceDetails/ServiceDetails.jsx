@@ -32,11 +32,12 @@ const ServiceDetails = () => {
                 <div className="card-body">
                     <h2 className="card-title">
                         {service.service_name}
-                        <div className="badge bg-red-400">PREMIUM</div>
+                        <div className="badge bg-red-400 text-white">PREMIUM</div>
                     </h2>
                     <p>{service.details}</p>
+                    <p className="text-xl font-medium">Price: $ {service.price}</p>
                     <div className="card-actions">
-                        <button className="btn bg-red-400 w-full">Purchase</button>
+                        <button className="btn bg-red-400 w-full text-white">Purchase</button>
                     </div>
                 </div>
             </div>

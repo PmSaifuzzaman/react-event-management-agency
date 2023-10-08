@@ -18,7 +18,8 @@ const ServiceCard = ({ service }) => {
                     :
                     <p>{details}</p>
                 }
-                <Link to={`/servicedetails/${id}`} className="btn my-3 bg-red-400">Price: ${price}</Link>
+                <p className="text-xl font-medium">Price: $ {price}</p>
+                <Link to={`/servicedetails/${id}`} className="btn my-3 bg-red-400 text-white">Details</Link>
             </div>
             <figure className="h-56"><img src={image} alt="Shoes" /></figure>
         </div>
