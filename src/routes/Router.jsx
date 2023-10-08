@@ -25,7 +25,9 @@ import PrivateRoute from "./PrivateRoute";
         },
         {
             path: "/service",
-            element: <Service></Service>
+            element: <Service></Service>,
+            loader: () => fetch('/services.json')
+
         },
         {
           path: "/servicedetails/:id",
