@@ -8,6 +8,7 @@ import Blog from "../pages/Blog/Blog";
 import Login from "../pages/Login/Login";
 import Contact from "../pages/Contact/Contact";
 import ServiceDetails from "../pages/ServiceDetails/ServiceDetails";
+import Register from "../pages/Register/Register";
 
   const router = createBrowserRouter([
     {
@@ -39,6 +40,10 @@ import ServiceDetails from "../pages/ServiceDetails/ServiceDetails";
             path: "/login",
             element: <Login></Login>
 
+        },
+        {
+          path: "/register",
+          element: <Register></Register>
         }
       ]
     },
