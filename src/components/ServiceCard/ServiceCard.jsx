@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 
 const ServiceCard = ({ service }) => {
 
     const { id, service_no, service_name, image, details, price } = service || {}
-    console.log(id)
+    // console.log(id)
 
     return (
         <div className="card bg-base-100 shadow-xl">
@@ -25,3 +26,7 @@ const ServiceCard = ({ service }) => {
 };
 
 export default ServiceCard;
+
+ServiceCard.propTypes = {
+    service: PropTypes.object,
+}
