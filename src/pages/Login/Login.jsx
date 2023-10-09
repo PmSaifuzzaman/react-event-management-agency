@@ -1,4 +1,4 @@
-import { ToastContainer, toast } from 'react-toastify';
+import {  toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
@@ -34,7 +34,6 @@ const Login = () => {
 
 
                 setLoginSuccess('User Logged in Successfully.')
-                toast("Login Successfully")
 
                 // Navigate after log in
                 navigate(visitLocation?.state ? visitLocation.state : '/')
@@ -68,7 +67,7 @@ const Login = () => {
                         <button className="btn bg-red-400 text-white">Login</button>
                     </div>
                 </form>
-                <ToastContainer></ToastContainer>
+                
                 {
                     loginError && <p className="text-red-800 text-center">Email or Password does not match</p>
 

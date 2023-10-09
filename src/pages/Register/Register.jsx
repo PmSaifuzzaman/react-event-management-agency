@@ -16,6 +16,12 @@ const Register = () => {
 
     // Destructure from context api
     const { createUser } = useContext(authContext);
+
+
+    const visitLocation = useLocation();
+
+    const navigate = useNavigate();
+
     // For googlr creating provider
     const auth = getAuth(app);
     const provider = new GoogleAuthProvider();
@@ -26,6 +32,10 @@ const Register = () => {
 
                 const user = result.user;
                 console.log(user);
+                toast('Login Successfully')
+
+                //  nevigate after log in
+                navigate(visitLocation?.state ? visitLocation.state : '/')
 
             }).catch((error) => {
 
@@ -34,10 +44,6 @@ const Register = () => {
 
             });
     }
-
-    const visitLocation = useLocation();
-
-    const navigate = useNavigate();
 
     const handleRegister = (e) => {
         e.preventDefault();
