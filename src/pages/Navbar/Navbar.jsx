@@ -107,9 +107,18 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
+                {
+                    user  && <p>{user.displayName}</p>
+                }
                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                    <div className="w-10 rounded-full">
-                        <img src={userDefaultPhoto} />
+                    <div >
+                        {
+                            user ? <div>
+                                <img className="w-10 rounded-full" src={user.photoURL} alt="" />
+                            </div>
+                                :
+                                <img src={userDefaultPhoto} />
+                        }
                     </div>
                 </label>
                 {

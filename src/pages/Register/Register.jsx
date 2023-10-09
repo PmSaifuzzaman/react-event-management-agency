@@ -1,18 +1,42 @@
-
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { FaGoogle } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { authContext } from "../../providers/AuthProvider";
 import Navbar from "../Navbar/Navbar";
+import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
+import app from '../../firebase/firebase.config';
 
 
 
 const Register = () => {
-    // Destructure from context api
-    const {createUser} = useContext(authContext);
+    const [registerError, setRegisterError] = useState('');
+    const [registerSuccess, setRegisterSuccess] = useState('');
 
-    const visitLocation =useLocation();
-    
+    // Destructure from context api
+    const { createUser } = useContext(authContext);
+    // For googlr creating provider
+    const auth = getAuth(app);
+    const provider = new GoogleAuthProvider();
+
+    const handleGoogleLogin = () => {
+        signInWithPopup(auth, provider)
+            .then((result) => {
+
+                const user = result.user;
+                console.log(user);
+
+            }).catch((error) => {
+
+                const errorMessage = error.message;
+                console.log(errorMessage)
+
+            });
+    }
+
+    const visitLocation = useLocation();
+
     const navigate = useNavigate();
 
     const handleRegister = (e) => {
@@ -22,20 +46,43 @@ const Register = () => {
         const email = e.target.email.value;
         const password = e.target.password.value;
         console.log(name, photoUrl, email, password);
+        // reset
+        setRegisterError('');
+        setRegisterSuccess('');
+
+        // password validation
+
+        if (password.length < 6) {
+            setRegisterError('Password should be minimum 6 charecter');
+            return;
+        }
+        else if (!/[A-Z]/.test(password)) {
+            setRegisterError('Password should contain at least one Uppercase Charecter');
+            return;
+        }
+        else if (!/[@#$%^&*]/.test(password)) {
+            setRegisterError('Password should contain at least one Special Charecter');
+            return;
+        }
 
         // Create user
         createUser(email, password)
-        .then((userCredential) => {
-            const user = userCredential.user;
-            console.log(user)
-            // Navigate user after registration
-            navigate(visitLocation?.state ? visitLocation.state : '/')
-          })
-          .catch((error) => {
-            const errorMessage = error.message;
-            console.log(errorMessage)
-          });
-        
+            .then((userCredential) => {
+                const user = userCredential.user;
+                console.log(user)
+                // set
+                setRegisterSuccess('User created successfully')
+                // Navigate user after registration
+                navigate(visitLocation?.state ? visitLocation.state : '/')
+            })
+            .catch((error) => {
+                const errorMessage = error.message;
+                console.log(errorMessage);
+                setRegisterError(errorMessage);
+            });
+
+
+
     }
 
     return (
@@ -54,7 +101,7 @@ const Register = () => {
                         <label className="label">
                             <span className="label-text">Photo URL</span>
                         </label>
-                        <input type="text" placeholder="Enter your Photo url" name="photoUrl" className="input input-bordered"  />
+                        <input type="text" placeholder="Enter your Photo url" name="photoUrl" className="input input-bordered" />
                     </div>
                     <div className="form-control">
                         <label className="label">
@@ -72,6 +119,15 @@ const Register = () => {
                         <button className="btn bg-red-400 text-white">Register</button>
                     </div>
                 </form>
+                <ToastContainer></ToastContainer>
+                {
+                    registerError && <p className="text-red-800 text-center">{registerError}</p>
+
+                }
+                {
+                    registerSuccess && toast("User created Successfully")
+                }
+                <div className='flex items-center justify-center pb-2'><button onClick={handleGoogleLogin} className='btn text-red-400'> <FaGoogle></FaGoogle> Log in with google</button></div>
                 <p className="text-center pb-4">Already Have An Account ? <Link className="underline text-blue-500 font-semibold" to={"/login"}>Login</Link></p>
             </div>
         </div>
