@@ -34,7 +34,7 @@ const Login = () => {
 
                 
                 setLoginSuccess('User Logged in Successfully.')
-                
+                toast("Login Successfully")
 
                 // Navigate after log in
                 navigate(visitLocation?.state ? visitLocation.state : '/')

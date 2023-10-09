@@ -3,6 +3,9 @@ import userDefaultPhoto from "../../assets/user.png"
 import logo from "../../assets/Logo 1.png"
 import { useContext } from "react";
 import { authContext } from "../../providers/AuthProvider";
+import { getAuth } from "firebase/auth";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Navbar = () => {
@@ -10,11 +13,17 @@ const Navbar = () => {
     // Access Context api
     const { user, logOut } = useContext(authContext);
 
+    const auth = getAuth()
+
     // Log out messege
     const handleLogOut = () => {
-        logOut()
-            .then(console.log('log out successfully'))
-            .catch(console.log('error occured'))
+        logOut(auth)
+            .then(() => {
+                toast('Log out Successfully')
+            })
+            .catch(() => {
+                toast('Cannot log out')
+            })
     }
 
 
@@ -126,7 +135,7 @@ const Navbar = () => {
                         :
                         <Link className="btn" to={"/login"}>Login</Link>
                 }
-
+                    <ToastContainer></ToastContainer>
             </div>
         </div>
     );

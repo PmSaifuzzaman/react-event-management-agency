@@ -3,13 +3,20 @@ import image1 from "../../assets/wedding.jpg"
 import image2 from "../../assets/anniversary.jpg"
 import image3 from "../../assets/engagement.jpg"
 import image4 from "../../assets/retirement.jpg"
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
+import AOS from 'aos';
 
 
 const Blog = () => {
+    useEffect(() => {
+        AOS.init();
+        
+      }, []);
     return (
         <div>
             <Navbar></Navbar>
-            <div className="max-w-3xl mx-auto">
+            <div className="max-w-3xl mx-auto" data-aos="slide-left">
                 <img src={image1} alt="" />
                 <p>Planning a wedding is an exciting journey filled with joy, love, and anticipation. It is a day you have dreamed of since forever, and now that it is finally happening, it is time to make your dream wedding a reality. In 2023, wedding trends are all about sustainability, unique venues, personalization, and breaking away from tradition. Consider eco-conscious choices, explore unique wedding venues like vineyards or historic estates, and personalize your ceremony with meaningful touches. Embrace non-traditional attire, interactive entertainment, creative food and drink stations, and drone photography to add a touch of uniqueness to your special day. For guests who can not attend in person, create a digital guest experience with live streaming and virtual guestbooks. Think beyond traditional wedding favors by giving back to your community or donating to a charity. And to ensure all these trends come together seamlessly, consider hiring a professional wedding planner. As you embark on this exciting journey, remember that the most important thing is to cherish each moment and celebrate the love you share. Contact our event management team today to start planning your dream wedding in 2023. We are here to make your wedding day truly unforgettable.</p>
             </div>

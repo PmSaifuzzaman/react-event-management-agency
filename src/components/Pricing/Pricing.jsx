@@ -1,4 +1,6 @@
-
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
+import AOS from 'aos';
 import { FaCheck } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
@@ -11,9 +13,13 @@ const Pricing = () => {
             console.log('buy button clicked')
         }
     
+        useEffect(() => {
+            AOS.init();
+            
+          }, [])
 
     return (
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-5xl mx-auto" data-aos="zoom-in-left">
             <h1 className="text-center text-5xl font-bold mt-6">Plan Pricing</h1>
             <p className='text-center text-lg py-2 mb-6'>Choose a best plan for you and your organization</p>
             <div className="grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
