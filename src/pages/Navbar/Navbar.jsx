@@ -117,7 +117,7 @@ const Navbar = () => {
             </div>
             <div className="navbar-end">
                 {
-                    user  && <p>{user.displayName}</p>
+                    user && <p>{user.displayName}</p>
                 }
                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                     <div >
@@ -135,7 +135,7 @@ const Navbar = () => {
                         :
                         <Link className="btn" to={"/login"}>Login</Link>
                 }
-                    <ToastContainer></ToastContainer>
+                <ToastContainer></ToastContainer>
             </div>
         </div>
     );

@@ -32,7 +32,7 @@ const Login = () => {
                 const user = userCredential.user;
                 console.log(user)
 
-                
+
                 setLoginSuccess('User Logged in Successfully.')
                 toast("Login Successfully")
 

@@ -16,8 +16,8 @@ const Home = () => {
 
     useEffect(() => {
         AOS.init();
-        
-      }, [])
+
+    }, [])
 
     return (
         <div>

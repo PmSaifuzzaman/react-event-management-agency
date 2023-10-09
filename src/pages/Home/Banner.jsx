@@ -9,8 +9,8 @@ import AOS from 'aos';
 const Banner = () => {
     useEffect(() => {
         AOS.init();
-        
-      }, []);
+
+    }, []);
     return (
         <div className="carousel w-full " data-aos="slide-left">
             {/* slide 1 */}
